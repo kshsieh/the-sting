@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 
 gem 'turbolinks', '~> 5'
+gem 'awesome_print'
 
 group :production, :staging do
   gem 'rails_12factor'
@@ -23,9 +24,12 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
+  gem 'annotate'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -34,6 +38,5 @@ group :development do
 end
 
 group :test do
-  gem 'factory_girl_rails'
   gem 'rspec-rails'
 end
