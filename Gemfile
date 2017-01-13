@@ -8,7 +8,7 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
-gem 'haml-rails'
+gem 'slim-rails'
 gem 'bootstrap-sass'
 
 gem 'turbolinks', '~> 5'
