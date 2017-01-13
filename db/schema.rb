@@ -17,14 +17,16 @@ ActiveRecord::Schema.define(version: 20170113221631) do
 
   create_table "issues", force: :cascade do |t|
     t.string   "title"
-    t.boolean  "urgent"
+    t.boolean  "urgent",      default: false
     t.integer  "effort"
     t.datetime "expires_at"
     t.text     "description"
     t.text     "expectation"
+    t.text     "image_url"
+    t.text     "video_url"
     t.integer  "topic_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.index ["topic_id"], name: "index_issues_on_topic_id", using: :btree
   end
 

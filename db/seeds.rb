@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+["Healthcare", "Foreign & Domestic Policy", "The Environment", "Immigration", "The Economy", "National Security"].each do |name|
+  t = Topic.find_or_create_by(name: name)
+
+  3.times do
+    FactoryGirl.create(:issue, topic: t)
+  end
+
+  FactoryGirl.create(:issue, :critical, topic: t)
+end
