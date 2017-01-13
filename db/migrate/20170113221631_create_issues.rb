@@ -7,7 +7,10 @@ class CreateIssues < ActiveRecord::Migration[5.0]
       t.datetime :expires_at
       t.text :description
       t.text :expectation
+      t.integer :topic_id
       t.timestamps
     end
+
+    add_index :issues, :topic_id
   end
 end

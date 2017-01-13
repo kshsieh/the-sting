@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20170113221631) do
     t.datetime "expires_at"
     t.text     "description"
     t.text     "expectation"
+    t.integer  "topic_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["topic_id"], name: "index_issues_on_topic_id", using: :btree
   end
 
   create_table "topics", force: :cascade do |t|
