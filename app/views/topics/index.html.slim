@@ -10,9 +10,9 @@
         .row.topic__issues-container__issue
           .col-md-12
             .topic__issues-container__issue__image-container
-              = image_tag(issue.image_url, class: 'topic__issues-container__issue__image-container__image')
               - if issue.urgent?
                 .topic__issues-container__issue__urgent
+              = image_tag(issue.image_url, class: 'topic__issues-container__issue__image-container__image')
             .topic__issues-container__issue__description
               .topic__issues-container__issue__description__title= issue.title
               .topic__issues-container__issue__description__effort #{issue.effort} minute call
