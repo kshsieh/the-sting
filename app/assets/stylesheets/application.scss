@@ -1,6 +1,49 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.bottom-nav {
+  padding: 8px 0px;
+  height: 50px;
+  background-color: #FAFAFA; 
+  border-top: 1px solid #979797;
+
+  &__item-container {
+    display: inline-block;
+    width: 100%;
+    padding: 0 30px;
+    &__item {
+      display: inline-block;
+      width: 33%;
+
+      &__text {
+        font-size: 10px; 
+        color: #929292;
+        text-decoration: none; 
+        text-align: center;
+
+        &:active {
+          transition: color 0.5s ease;
+          color: #4DE2FF; 
+        }
+      }
+
+      &__symbol {
+        width: 25px;
+        height: 25px;
+        -webkit-border-radius: 3px; 
+        border-radius: 3px; 
+        background-color: #D8D8D8;
+        margin: auto;
+
+        &:active {
+          transition: color 0.5s ease;
+          background-color: #63C0D2; 
+        }
+      }
+    }
+  }
+}
+
 .topic {
   width: 100%;
   padding: 5px 20px;

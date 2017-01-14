@@ -2,13 +2,13 @@
 - @topics.each do |topic|
   .topic
     .row.topic__header
-      .col-md-12
+      .col-xs-12
         h2.topic__header__name= topic.name
         .topic__header__issues-count= issues_count_to_string(topic.issues.count)
     .topic__issues-container
       - topic.issues.first(3).each do |issue|
         .row.topic__issues-container__issue
-          .col-md-12
+          .col-xs-12
             .topic__issues-container__issue__image-container
               - if issue.urgent?
                 .topic__issues-container__issue__urgent
