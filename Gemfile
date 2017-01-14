@@ -17,6 +17,10 @@ gem 'awesome_print'
 
 gem 'rounding'
 
+# TODO: move this after we actually start populating live data
+gem 'factory_girl_rails'
+gem 'faker'
+
 group :production, :staging do
   gem 'rails_12factor'
 end
@@ -27,8 +31,6 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'guard-bundler'
-  gem 'factory_girl_rails'
-  gem 'faker'
 end
 
 group :development do
