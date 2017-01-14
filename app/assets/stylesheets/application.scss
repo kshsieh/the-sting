@@ -35,15 +35,15 @@
       }
 
       &__urgent {
-        position: fixed;
         width: 30px;
         height: 30px;
         background-image: url("star.png");
         -webkit-background-size: 30px 30px;
         -o-background-size: 30px 30px;
         background-size: 30px 30px;
+        position: absolute;
+        top: 25px;
         margin-left: -10px;
-        margin-top: 25px;
       }
 
       &__image-container {
