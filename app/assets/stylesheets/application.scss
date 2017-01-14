@@ -1,7 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  margin-bottom: 50px 
+}
+
 .bottom-nav {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   padding: 8px 0px;
   height: 50px;
   background-color: #FAFAFA; 
