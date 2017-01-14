@@ -15,6 +15,8 @@ gem 'bootstrap-sass'
 gem 'turbolinks', '~> 5'
 gem 'awesome_print'
 
+gem 'rounding'
+
 group :production, :staging do
   gem 'rails_12factor'
 end

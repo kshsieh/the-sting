@@ -5,7 +5,7 @@ FactoryGirl.define do
 
   factory :issue do
     title { Faker::Lorem.sentence(3) }
-    effort { rand(10) }
+    effort { rand(1..20) }
     expires_at { DateTime.current.beginning_of_hour + rand(20).hours }
     description { Faker::Lorem.paragraph(5) }
     expectation { Faker::Lorem.paragraph(5) }

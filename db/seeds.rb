@@ -8,7 +8,7 @@
 ["Healthcare", "Foreign & Domestic Policy", "The Environment", "Immigration", "The Economy", "National Security"].each do |name|
   t = Topic.find_or_create_by(name: name)
 
-  3.times do
+  rand(10).times do
     FactoryGirl.create(:issue, topic: t)
   end
 
