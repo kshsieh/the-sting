@@ -2,6 +2,9 @@
   .issue
     h2.header= @issue.title
     .issue__flags
-    .issue__why-this-matters
+    .issue__section
       h5 Why this matters (expires in #{time_ago_in_words(@issue.expires_at)})
-    .issue__what-to-expect
+      .issue__section__text= @issue.description
+    .issue__section
+      h5 What to expect
+      .issue__section__text= @issue.expectation
