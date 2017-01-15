@@ -15,7 +15,6 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-
 class Issue < ActiveRecord::Base
   validates_presence_of :title, :effort, :expires_at, :description, :expectation, :topic
   validates_inclusion_of :urgent, in: [true, false]
@@ -29,9 +28,5 @@ class Issue < ActiveRecord::Base
 
   def self.expired
     where("expired_at < ?", DateTime.current)
-  end
-
-  def expires_in
-
   end
 end

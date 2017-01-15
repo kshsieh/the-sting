@@ -3,5 +3,5 @@
     h2.header= @issue.title
     .issue__flags
     .issue__why-this-matters
-      h5 Why this matters
+      h5 Why this matters (expires in #{time_ago_in_words(@issue.expires_at)})
     .issue__what-to-expect
