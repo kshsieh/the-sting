@@ -1,19 +1,20 @@
 .container
 - @topics.each do |topic|
-  .topic
-    .row.topic__header
+  .topic-card
+    .row.topic-info
       .col-xs-12
-        h2.topic__header__name= topic.name
-        .topic__header__issues-count= issues_count_to_string(topic.issues.count)
+        h2.header= topic.name
+        .topic-info__issues-count= issues_count_to_string(topic.issues.count)
     - topic.issues.first(3).each do |issue|
-      .row.issue
-        .col-xs-12
-          .issue__image-container
-            - if issue.urgent?
-              .issue__urgent
-            = image_tag(issue.image_url, class: 'issue__image-container__image')
-          .issue__description
-            .issue__description__title= issue.title
-            .issue__description__effort #{issue.effort} minute call
+      = link_to issue_path(issue), class: "issue-card" do
+        .row
+          .col-xs-12
+            .issue-card__image-container
+              - if issue.urgent?
+                .issue-card__urgent
+              = image_tag(issue.image_url, class: 'issue-card__image-container__image')
+            .issue-card__description
+              .issue-card__description__title= issue.title
+              .issue-card__description__effort #{issue.effort} minute call
     - if topic.issues.count > 3
-      = link_to("View #{topic.issues.count - 3} More Issues", topic_issues_path(topic.id), class: 'topic__issues-container__more')
+      = link_to("View #{topic.issues.count - 3} More Issues", topic_issues_path(topic.id), class: 'more-issues')
