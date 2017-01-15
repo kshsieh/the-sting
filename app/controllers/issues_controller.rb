@@ -5,10 +5,6 @@ class IssuesController < ApplicationController
   def show
   end
 
-  def script
-    @script = @issue.script
-  end
-
   private
 
   def load_issue

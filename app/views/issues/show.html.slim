@@ -12,5 +12,5 @@
       h5 What to expect
       .issue__section__text= @issue.expectation
     p Average Time Spent: #{effort_to_string(@issue.effort)}
-    = link_to script_issue_path(@issue) do
+    = link_to script_path(@issue.script) do
       .issue__cta.cta view the script
