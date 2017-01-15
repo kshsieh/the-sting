@@ -5,7 +5,7 @@
       .col-xs-12
         h2.header= topic.name
         .topic-info__issues-count= issues_count_to_string(topic.issues.count)
-    - topic.issues.first(3).each do |issue|
+    - topic.issues.actionable.first(3).each do |issue|
       = link_to issue_path(issue), class: "issue-card" do
         .row
           .col-xs-12
@@ -16,5 +16,5 @@
             .issue-card__description
               .issue-card__description__title= issue.title
               .issue-card__description__effort #{issue.effort} minute call
-    - if topic.issues.count > 3
+    - if topic.issues.actionable.count > 3
       = link_to("View #{topic.issues.count - 3} More Issues", topic_issues_path(topic.id), class: 'more-issues')

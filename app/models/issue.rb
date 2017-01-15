@@ -22,4 +22,16 @@ class Issue < ActiveRecord::Base
   belongs_to :topic
 
   default_scope { order("urgent DESC") }
+
+  def self.actionable
+    where("expires_at > ?", DateTime.current)
+  end
+
+  def self.expired
+    where("expired_at < ?", DateTime.current)
+  end
+
+  def expires_in
+
+  end
 end
