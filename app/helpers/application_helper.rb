@@ -2,7 +2,8 @@ require 'rounding'
 
 module ApplicationHelper
   def effort_to_string(int)
-    "< #{int.ceil_to(5)} minutes"
+    rounded = int.ceil_to(5) 
+    rounded > 1 ? "< #{rounded} minutes" : "< #{rounded} minute"
   end
 
   def issues_count_to_string(int)
