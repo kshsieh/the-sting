@@ -25,6 +25,7 @@ body {
 }
 
 .flag--urgent {
+  text-transform: uppercase;
   background-color: #FF6363;
   font-weight: 500;
 }
@@ -32,3 +33,20 @@ body {
 .flag--time {
   background-color: #FD980D;
 }
+
+.cta {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 10px;
+  width: 280px;
+  height: 45px;
+  background-color: #63C0D2;
+  text-align: center;
+  color: white;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300; 
+  font-size: 16px;
+}
+

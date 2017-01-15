@@ -3,7 +3,7 @@
     h2.header= @issue.title
     .issue__flags
       -if @issue.urgent?
-        .flag.flag--urgent URGENT ISSUE
+        .flag.flag--urgent urgent issue
       .flag.flag--time= estimated_effort_to_string(@issue.effort)
     .issue__section
       h5 Why this matters (expires in #{time_ago_in_words(@issue.expires_at)})
@@ -12,3 +12,5 @@
       h5 What to expect
       .issue__section__text= @issue.expectation
     p Average Time Spent: #{effort_to_string(@issue.effort)}
+    = link_to script_issue_path(@issue) do
+      .issue__cta.cta view the script
