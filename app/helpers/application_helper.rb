@@ -13,5 +13,6 @@ module ApplicationHelper
   def button_is_active?(type, path)
     klass = 'nav-button'
     klass += ' nav-button--active' if type == path
+    klass
   end
 end
