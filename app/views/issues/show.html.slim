@@ -2,6 +2,9 @@
   .issue
     h2.header= @issue.title
     .issue__flags
+      -if @issue.urgent?
+        .flag.flag--urgent URGENT ISSUE
+      .flag.flag--time= effort_to_string(@issue.effort)
     .issue__section
       h5 Why this matters (expires in #{time_ago_in_words(@issue.expires_at)})
       .issue__section__text= @issue.description

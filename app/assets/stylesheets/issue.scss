@@ -1,8 +1,12 @@
 .issue {
   padding: 10px 0;
 
+  &__flags {
+    margin-top: 10px;
+  }
+
   &__section {
-    margin: 30px 0;
+    margin: 25px 0;
 
     &__text {
       line-height: 1.5;

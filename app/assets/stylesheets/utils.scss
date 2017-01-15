@@ -13,3 +13,21 @@ body {
   margin-top: 15px;
   margin-bottom: 0px;
 }
+
+.flag {
+  display: inline-block; 
+  padding: 5px 20px;
+  border-radius: 8px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.flag--urgent {
+  background-color: #FF6363;
+}
+
+.flag--time {
+  background-color: #FD980D;
+}
