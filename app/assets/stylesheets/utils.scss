@@ -16,16 +16,17 @@ body {
 
 .flag {
   display: inline-block; 
-  padding: 5px 20px;
+  padding: 3px 20px;
   border-radius: 8px;
   color: white;
   letter-spacing: 1px;
-  font-weight: 500;
   margin-right: 8px;
+  font-size: 16px;
 }
 
 .flag--urgent {
   background-color: #FF6363;
+  font-weight: 500;
 }
 
 .flag--time {
