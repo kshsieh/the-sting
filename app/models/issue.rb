@@ -18,7 +18,9 @@
 class Issue < ActiveRecord::Base
   validates_presence_of :title, :effort, :expires_at, :description, :expectation, :topic
   validates_inclusion_of :urgent, in: [true, false]
+  
   belongs_to :topic
+  has_one :script
 
   default_scope { order("urgent DESC") }
 

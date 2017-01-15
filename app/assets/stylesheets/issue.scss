@@ -13,9 +13,16 @@
     }
   }
 
-  &__cta {
+  &__cta, &__remind {
     position: fixed; 
     bottom: 70px;
+    right: 0;
+    left: 0;
+  }
+
+  &__call {
+    position: fixed; 
+    bottom: 130px;
     right: 0;
     left: 0;
   }

@@ -6,6 +6,7 @@ class IssuesController < ApplicationController
   end
 
   def script
+    @script = @issue.script
   end
 
   private

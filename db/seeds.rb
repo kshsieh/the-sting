@@ -9,8 +9,10 @@
   t = Topic.find_or_create_by(name: name)
 
   rand(10).times do
-    FactoryGirl.create(:issue, topic: t)
+    i = FactoryGirl.create(:issue, topic: t)
+    FactoryGirl.create(:script, issue: i)
   end
 
-  FactoryGirl.create(:issue, :critical, topic: t)
+  i = FactoryGirl.create(:issue, :critical, topic: t)
+  FactoryGirl.create(:script, issue: i)
 end

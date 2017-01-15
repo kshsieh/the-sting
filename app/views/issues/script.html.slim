@@ -1,3 +1,15 @@
 .container
   .issue
     h2.header= @issue.title
+    .issue__section
+      h5 The Script
+      .issue__section__text= @script.script_for_user(User.new)
+    hr
+    .issue__section
+      .issue__section__text
+        p Once you hit the call now button, your iPhone will show a confirmation alert.
+        p You’ll tap Call Now again, and then your phone will automatically open the Phone app.
+        p Once the phone app opens, you’ll need to tap the iPhone Home button to close the phone app (while the call is on) and then tap the Sting app to return and view the script.
+    = link_to("tel:#{@script.phone}") do
+      .issue__call.cta call now
+    .issue__remind.cta.cta--inverse remind me: call later
