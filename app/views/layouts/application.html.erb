@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <%= render 'shared/top_nav' %>
+    <%= render partial: 'shared/top_nav', locals: { title: @title } %>
     <%= yield %>
     <%= render 'shared/bottom_nav' %>
   </body>

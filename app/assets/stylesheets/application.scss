@@ -25,13 +25,19 @@ body {
   border-bottom: 1px solid #D8D8D8;
 }
 
-.top-nav {
-}
-
-.bottom-nav-container {
+.nav-container {
   display: inline-block;
   width: 100%;
   padding: 0 30px;
+}
+
+.nav-title {
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500; 
 }
 
 .nav-button {

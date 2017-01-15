@@ -1,9 +1,9 @@
 .nav.nav--bottom
-  .bottom-nav-container
+  .nav-container
     span class=button_is_active?("/", request.fullpath)
       .nav-button__symbol
       .nav-button__text Home
-    span.nav-button
+    span class=button_is_active?("/topics", request.fullpath)
       .nav-button__symbol
       .nav-button__text Topics
     span class=button_is_active?("/calls", request.fullpath)
