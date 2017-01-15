@@ -31,6 +31,7 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem 'better_errors'
 end
 
 group :development do

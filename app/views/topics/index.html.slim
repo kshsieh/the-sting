@@ -5,16 +5,15 @@
       .col-xs-12
         h2.topic__header__name= topic.name
         .topic__header__issues-count= issues_count_to_string(topic.issues.count)
-    .topic__issues-container
-      - topic.issues.first(3).each do |issue|
-        .row.topic__issues-container__issue
-          .col-xs-12
-            .topic__issues-container__issue__image-container
-              - if issue.urgent?
-                .topic__issues-container__issue__urgent
-              = image_tag(issue.image_url, class: 'topic__issues-container__issue__image-container__image')
-            .topic__issues-container__issue__description
-              .topic__issues-container__issue__description__title= issue.title
-              .topic__issues-container__issue__description__effort #{issue.effort} minute call
-      - if topic.issues.count > 3
-        = link_to("View #{topic.issues.count - 3} More Issues", topic_issues_path(topic.id), class: 'topic__issues-container__more')
+    - topic.issues.first(3).each do |issue|
+      .row.issue
+        .col-xs-12
+          .issue__image-container
+            - if issue.urgent?
+              .issue__urgent
+            = image_tag(issue.image_url, class: 'issue__image-container__image')
+          .issue__description
+            .issue__description__title= issue.title
+            .issue__description__effort #{issue.effort} minute call
+    - if topic.issues.count > 3
+      = link_to("View #{topic.issues.count - 3} More Issues", topic_issues_path(topic.id), class: 'topic__issues-container__more')

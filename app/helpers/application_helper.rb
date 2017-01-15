@@ -9,4 +9,9 @@ module ApplicationHelper
     string = int > 1 ? "current issues" : "current issue"
     "#{int} #{string}"
   end
+
+  def button_is_active?(type, path)
+    klass = 'nav-button'
+    klass += ' nav-button--active' if type == path
+  end
 end
