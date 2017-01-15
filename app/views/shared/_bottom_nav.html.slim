@@ -1,8 +1,9 @@
 .nav.nav--bottom
   .nav-container
-    span class=button_is_active?("/", request.fullpath)
-      .nav-button__symbol
-      .nav-button__text Home
+    = link_to root_path do
+      span class=button_is_active?("/", request.fullpath)
+        .nav-button__symbol
+        .nav-button__text Home
     span class=button_is_active?("/topics", request.fullpath)
       .nav-button__symbol
       .nav-button__text Topics
