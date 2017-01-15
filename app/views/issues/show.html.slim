@@ -11,4 +11,4 @@
     .issue__section
       h5 What to expect
       .issue__section__text= @issue.expectation
-    p Average Time Spent: #{@issue.effort} minutes
+    p Average Time Spent: #{effort_to_string(@issue.effort)}
