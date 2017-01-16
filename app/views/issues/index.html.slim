@@ -1,0 +1,13 @@
+.container
+  h4 #{@topic.issues.count} Issues
+  - @topic.issues.each do |issue|
+    = link_to issue_path(issue), class: "issue-card" do
+      .row
+        .col-xs-12
+          .issue-card__image-container
+            - if issue.urgent?
+              .issue-card__urgent
+            = image_tag(issue.image_url, class: 'issue-card__image-container__image')
+          .issue-card__description
+            .issue-card__description__title= issue.title
+            .issue-card__description__effort #{issue.effort} minute call
