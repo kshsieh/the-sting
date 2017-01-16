@@ -2,15 +2,14 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Sting</title>
+    <title>The Sting Admin</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render partial: 'shared/top_nav', locals: { title: @title } %>
+    <%= render 'shared/admin_nav' %>
     <%= yield %>
-    <%= render 'shared/bottom_nav' %>
   </body>
 </html>

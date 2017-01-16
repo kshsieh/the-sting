@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "utils";
-@import "nav";
-@import "home";
-@import "issue";
+@import "application/utils";
+@import "application/nav";
+@import "application/home";
+@import "application/issue";

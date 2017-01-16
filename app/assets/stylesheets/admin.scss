@@ -1,0 +1,30 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html, body {
+  height: 100%;
+}
+
+.navbar--admin {
+  margin-bottom: 0;
+}
+
+.admin-layout {
+  &__left {
+    background-color: #979797;
+    color: white;
+    padding: 20px 20px;
+  }
+}
+
+.topic {
+  &__name {
+    font-size: 16px; 
+  }
+
+  &__actions {
+    
+  }
+
+  margin-bottom: 10px; 
+}

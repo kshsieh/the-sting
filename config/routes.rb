@@ -8,5 +8,17 @@ Rails.application.routes.draw do
     resources :issues, only: [:index]
   end
 
+  namespace :admin do
+    resources :topics do
+      resources :issues
+    end
+
+    resources :issues do
+      resources :scripts
+    end
+  end
+
+  get "/admin/", to: "admin/topics#index"
+
   root 'home#show'
 end

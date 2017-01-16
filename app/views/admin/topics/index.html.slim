@@ -1,0 +1,10 @@
+.container-fluid
+  .row.admin-layout
+    .admin-layout__left.col-xs-5
+      - @topics.each do |topic|
+        .topic
+          .topic__name= topic.name
+      = link_to '+ topic', new_admin_topic_path, class: 'btn btn-primary btn-block'
+
+    .admin-layout__right.col-xs-7
+      | do stuff

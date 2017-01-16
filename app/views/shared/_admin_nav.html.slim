@@ -1,0 +1,8 @@
+.navbar.navbar-default.navbar--admin
+  .container-fluid
+    = link_to 'The Sting', admin_path, class: 'mini-navbar navbar-brand'
+    ul.nav.navbar-nav
+      li class=(request.fullpath == '/admin/topics' ? 'active' : '')
+        = link_to 'Topics', admin_topics_path
+      li class=(request.fullpath == '/admin/issues' ? 'active' : '')
+        = link_to 'Issues', admin_issues_path
